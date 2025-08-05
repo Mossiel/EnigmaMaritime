@@ -56,26 +56,6 @@ const translations = {
         'labs.availability.title': '24/7 Service Availability',
         'labs.availability.description': 'Our laboratories operate around the clock with advanced testing equipment and certified technicians to provide rapid, accurate results when you need them most.',
         
-        // Offices Section
-        'offices.title': 'International Offices',
-        'offices.subtitle': 'Global presence with local expertise across Latin America and the Caribbean',
-        'offices.dominican.country': 'Dominican Republic',
-        'offices.dominican.address': 'Santo Domingo, Headquarters',
-        'offices.aruba.country': 'Aruba',
-        'offices.aruba.address': 'Oranjestad, Main Laboratory',
-        'offices.bonaire.country': 'Bonaire',
-        'offices.bonaire.address': 'Kralendijk, Testing Facility',
-        'offices.panama.country': 'Panama',
-        'offices.panama.address': 'Panama City, Regional Office',
-        'offices.venezuela.country': 'Venezuela',
-        'offices.venezuela.address': 'Caracas, Branch Office',
-        'offices.costarica.country': 'Costa Rica',
-        'offices.costarica.address': 'San José, Regional Office',
-        'offices.argentina.country': 'Argentina',
-        'offices.argentina.address': 'Buenos Aires, South Office',
-        'offices.uruguay.country': 'Uruguay',
-        'offices.uruguay.address': 'Montevideo, Branch Office',
-        
         // Contact Section
         'contact.title': 'Contact Us',
         'contact.subtitle': 'Ready to discuss your maritime service needs? Get in touch with our experts today.',
@@ -180,26 +160,6 @@ const translations = {
         'labs.locations.dominican': 'República Dominicana - Laboratorio sede',
         'labs.availability.title': 'Disponibilidad de Servicio 24/7',
         'labs.availability.description': 'Nuestros laboratorios operan las 24 horas con equipos de prueba avanzados y técnicos certificados para proporcionar resultados rápidos y precisos cuando más los necesite.',
-        
-        // Offices Section
-        'offices.title': 'Oficinas Internacionales',
-        'offices.subtitle': 'Presencia global con experiencia local en América Latina y el Caribe',
-        'offices.dominican.country': 'República Dominicana',
-        'offices.dominican.address': 'Santo Domingo, Sede Principal',
-        'offices.aruba.country': 'Aruba',
-        'offices.aruba.address': 'Oranjestad, Laboratorio Principal',
-        'offices.bonaire.country': 'Bonaire',
-        'offices.bonaire.address': 'Kralendijk, Instalación de Pruebas',
-        'offices.panama.country': 'Panamá',
-        'offices.panama.address': 'Ciudad de Panamá, Oficina Regional',
-        'offices.venezuela.country': 'Venezuela',
-        'offices.venezuela.address': 'Caracas, Oficina Sucursal',
-        'offices.costarica.country': 'Costa Rica',
-        'offices.costarica.address': 'San José, Oficina Regional',
-        'offices.argentina.country': 'Argentina',
-        'offices.argentina.address': 'Buenos Aires, Oficina Sur',
-        'offices.uruguay.country': 'Uruguay',
-        'offices.uruguay.address': 'Montevideo, Oficina Sucursal',
         
         // Contact Section
         'contact.title': 'Contáctanos',
