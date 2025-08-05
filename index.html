@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">Enigma Maritime - Latin America's Trusted Partner in Cargo Inspection</title>
+    <meta name="description" data-i18n="page.description" content="Certified maritime services across the Caribbean - Quality, Precision, Compliance. Founded in 2011 in Dominican Republic.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e'
+                        },
+                        secondary: {
+                            50: '#fefce8',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f'
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-inter text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <div class="text-2xl font-bold text-primary-700">
+                        <span data-i18n="nav.logo">Enigma Maritime</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-900 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-i18n="nav.home">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-i18n="nav.about">About</a>
+                        <a href="#services" class="nav-link text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-i18n="nav.services">Services</a>
+                        <a href="#labs" class="nav-link text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-i18n="nav.labs">Labs</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors" data-i18n="nav.contact">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Language Switch & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <div class="language-switch">
+                        <button id="lang-en" class="lang-btn active px-2 py-1 text-sm font-medium text-primary-600 hover:text-primary-800 transition-colors">EN</button>
+                        <span class="text-gray-400">|</span>
+                        <button id="lang-es" class="lang-btn px-2 py-1 text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors">ES</button>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden">
+                        <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <i class="fas fa-bars text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-primary-600 hover:bg-gray-50" data-i18n="nav.home">Home</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50" data-i18n="nav.about">About</a>
+                <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50" data-i18n="nav.services">Services</a>
+                <a href="#labs" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50" data-i18n="nav.labs">Labs</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 overflow-hidden">
+        <!-- Background Image Overlay -->
+        <div class="absolute inset-0 bg-black/40 z-10"></div>
+        <div class="absolute inset-0 bg-maritime-hero bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+        
+        <!-- Content -->
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    <span data-i18n="hero.title">Latin America's Trusted Partner in Cargo Inspection, Inventory Control, and Laboratory Services</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto" data-i18n="hero.subtitle">
+                    Certified services across the Caribbean – Quality. Precision. Compliance.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#about" class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg" data-i18n="hero.cta.learn">
+                        Learn More
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105" data-i18n="hero.cta.request">
+                        Request Service
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+            <div class="animate-bounce">
+                <i class="fas fa-chevron-down text-white text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-i18n="about.title">
+                    About Enigma Maritime
+                </h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <div class="bg-gray-50 rounded-2xl p-8 h-96 flex items-center justify-center">
+                        <i class="fas fa-ship text-primary-500 text-8xl"></i>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-calendar-alt text-primary-600 text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="about.founded.title">
+                                    Founded in 2011
+                                </h3>
+                                <p class="text-gray-600" data-i18n="about.founded.description">
+                                    Established in the Dominican Republic, we have grown to become a leading provider of maritime inspection and laboratory services across Latin America and the Caribbean.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-globe-americas text-primary-600 text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="about.presence.title">
+                                    International Presence
+                                </h3>
+                                <p class="text-gray-600" data-i18n="about.presence.description">
+                                    With offices and laboratories across multiple countries, we provide comprehensive coverage and local expertise to serve our clients' needs throughout the region.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-certificate text-primary-600 text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="about.certification.title">
+                                    ISO Certified Excellence
+                                </h3>
+                                <p class="text-gray-600" data-i18n="about.certification.description">
+                                    Our commitment to quality is demonstrated through our ISO certifications and adherence to international standards including API, ASTM, and IFIA protocols.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-i18n="services.title">
+                    Our Services
+                </h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="services.subtitle">
+                    Comprehensive maritime and laboratory services designed to meet the highest industry standards
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Q&Q Inspection -->
+                <div class="service-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-500 transition-colors duration-300">
+                        <i class="fas fa-search text-primary-600 text-2xl group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4" data-i18n="services.qq.title">
+                        Q&Q Inspection
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed" data-i18n="services.qq.description">
+                        Real-time cargo supervision and legal certification based on API, ASTM, and IFIA standards. Ensuring quantity and quality compliance for all maritime operations.
+                    </p>
+                </div>
+                
+                <!-- Laboratory Analysis -->
+                <div class="service-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-500 transition-colors duration-300">
+                        <i class="fas fa-flask text-primary-600 text-2xl group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4" data-i18n="services.lab.title">
+                        Laboratory Analysis
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed" data-i18n="services.lab.description">
+                        24/7 physical-chemical analysis of hydrocarbons, petrochemicals, agriculture, and minerals with advanced testing equipment and certified procedures.
+                    </p>
+                </div>
+                
+                <!-- Fiscal Control -->
+                <div class="service-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-500 transition-colors duration-300">
+                        <i class="fas fa-chart-line text-primary-600 text-2xl group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4" data-i18n="services.fiscal.title">
+                        Fiscal Control
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed" data-i18n="services.fiscal.description">
+                        Fuel quantity and quality verification, subsidy validation, and strategic statistical reporting for government and regulatory compliance.
+                    </p>
+                </div>
+                
+                <!-- Loss Control -->
+                <div class="service-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-500 transition-colors duration-300">
+                        <i class="fas fa-shield-alt text-primary-600 text-2xl group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4" data-i18n="services.loss.title">
+                        Loss Control
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed" data-i18n="services.loss.description">
+                        Client representation with real-time reports and comprehensive terminal evaluations to minimize losses and maximize operational efficiency.
+                    </p>
+                </div>
+                
+                <!-- Inventory Control -->
+                <div class="service-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-500 transition-colors duration-300">
+                        <i class="fas fa-warehouse text-primary-600 text-2xl group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4" data-i18n="services.inventory.title">
+                        Inventory Control
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed" data-i18n="services.inventory.description">
+                        Tank and pipeline volume measurements, reconciliation services, and transfer book maintenance for accurate inventory management.
+                    </p>
+                </div>
+                
+                <!-- Logistics & Warehousing -->
+                <div class="service-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-500 transition-colors duration-300">
+                        <i class="fas fa-truck text-primary-600 text-2xl group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4" data-i18n="services.logistics.title">
+                        Logistics & Warehousing
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed" data-i18n="services.logistics.description">
+                        Complete storage, stevedoring, customs, and port services with expert import/export consulting for seamless operations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Labs & Coverage Section -->
+    <section id="labs" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-i18n="labs.title">
+                    Laboratory Network & Coverage
+                </h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6" data-i18n="labs.network.title">
+                        Strategic Laboratory Locations
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-map-marker-alt text-primary-500 text-lg"></i>
+                            <span class="text-gray-700" data-i18n="labs.locations.aruba">Aruba - Full-service laboratory</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-map-marker-alt text-primary-500 text-lg"></i>
+                            <span class="text-gray-700" data-i18n="labs.locations.bonaire">Bonaire - Advanced testing facility</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-map-marker-alt text-primary-500 text-lg"></i>
+                            <span class="text-gray-700" data-i18n="labs.locations.eustatius">St. Eustatius - Regional analysis center</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-map-marker-alt text-primary-500 text-lg"></i>
+                            <span class="text-gray-700" data-i18n="labs.locations.dominican">Dominican Republic - Headquarters laboratory</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-6 bg-primary-50 rounded-lg">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <i class="fas fa-clock text-primary-600 text-xl"></i>
+                            <h4 class="text-lg font-semibold text-gray-900" data-i18n="labs.availability.title">24/7 Service Availability</h4>
+                        </div>
+                        <p class="text-gray-700" data-i18n="labs.availability.description">
+                            Our laboratories operate around the clock with advanced testing equipment and certified technicians to provide rapid, accurate results when you need them most.
+                        </p>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <div class="bg-gray-100 rounded-2xl p-8 h-96 flex items-center justify-center">
+                        <i class="fas fa-microscope text-primary-500 text-8xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- International Offices Section -->
+    <section id="offices" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-i18n="offices.title">
+                    International Offices
+                </h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="offices.subtitle">
+                    Global presence with local expertise across Latin America and the Caribbean
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Dominican Republic -->
+                <div class="office-card bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-building text-primary-500 text-xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900" data-i18n="offices.dominican.country">Dominican Republic</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2" data-i18n="offices.dominican.address">Santo Domingo, Headquarters</p>
+                    <p class="text-sm text-gray-600">+1 (809) 555-0123</p>
+                </div>
+                
+                <!-- Aruba -->
+                <div class="office-card bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-building text-primary-500 text-xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900" data-i18n="offices.aruba.country">Aruba</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2" data-i18n="offices.aruba.address">Oranjestad, Main Laboratory</p>
+                    <p class="text-sm text-gray-600">+297 582 5555</p>
+                </div>
+                
+                <!-- Bonaire -->
+                <div class="office-card bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-building text-primary-500 text-xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900" data-i18n="offices.bonaire.country">Bonaire</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2" data-i18n="offices.bonaire.address">Kralendijk, Testing Facility</p>
+                    <p class="text-sm text-gray-600">+599 717 5555</p>
+                </div>
+                
+                <!-- Panama -->
+                <div class="office-card bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-building text-primary-500 text-xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900" data-i18n="offices.panama.country">Panama</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2" data-i18n="offices.panama.address">Panama City, Regional Office</p>
+                    <p class="text-sm text-gray-600">+507 555 0123</p>
+                </div>
+                
+                <!-- Venezuela -->
+                <div class="office-card bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-building text-primary-500 text-xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900" data-i18n="offices.venezuela.country">Venezuela</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2" data-i18n="offices.venezuela.address">Caracas, Branch Office</p>
+                    <p class="text-sm text-gray-600">+58 212 555 0123</p>
+                </div>
+                
+                <!-- Costa Rica -->
+                <div class="office-card bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-building text-primary-500 text-xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900" data-i18n="offices.costarica.country">Costa Rica</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2" data-i18n="offices.costarica.address">San José, Regional Office</p>
+                    <p class="text-sm text-gray-600">+506 2555 0123</p>
+                </div>
+                
+                <!-- Argentina -->
+                <div class="office-card bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6" data-aos="fade-up" data-aos-delay="700">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-building text-primary-500 text-xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900" data-i18n="offices.argentina.country">Argentina</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2" data-i18n="offices.argentina.address">Buenos Aires, South Office</p>
+                    <p class="text-sm text-gray-600">+54 11 5555 0123</p>
+                </div>
+                
+                <!-- Uruguay -->
+                <div class="office-card bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6" data-aos="fade-up" data-aos-delay="800">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-building text-primary-500 text-xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900" data-i18n="offices.uruguay.country">Uruguay</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-2" data-i18n="offices.uruguay.address">Montevideo, Branch Office</p>
+                    <p class="text-sm text-gray-600">+598 2555 0123</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-i18n="contact.title">
+                    Contact Us
+                </h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="contact.subtitle">
+                    Ready to discuss your maritime service needs? Get in touch with our experts today.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2" data-i18n="contact.form.name">
+                                    Full Name
+                                </label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                                       data-i18n-placeholder="contact.form.name.placeholder">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2" data-i18n="contact.form.email">
+                                    Email Address
+                                </label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                                       data-i18n-placeholder="contact.form.email.placeholder">
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2" data-i18n="contact.form.phone">
+                                    Phone Number
+                                </label>
+                                <input type="tel" id="phone" name="phone" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                                       data-i18n-placeholder="contact.form.phone.placeholder">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-2" data-i18n="contact.form.service">
+                                    Service Needed
+                                </label>
+                                <select id="service" name="service" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors">
+                                    <option value="" data-i18n="contact.form.service.select">Select a service</option>
+                                    <option value="qq-inspection" data-i18n="contact.form.service.qq">Q&Q Inspection</option>
+                                    <option value="laboratory" data-i18n="contact.form.service.lab">Laboratory Analysis</option>
+                                    <option value="fiscal" data-i18n="contact.form.service.fiscal">Fiscal Control</option>
+                                    <option value="loss-control" data-i18n="contact.form.service.loss">Loss Control</option>
+                                    <option value="inventory" data-i18n="contact.form.service.inventory">Inventory Control</option>
+                                    <option value="logistics" data-i18n="contact.form.service.logistics">Logistics & Warehousing</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2" data-i18n="contact.form.message">
+                                Message
+                            </label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                                      data-i18n-placeholder="contact.form.message.placeholder"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                                data-i18n="contact.form.submit">
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="success-message" class="hidden mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span data-i18n="contact.form.success">Thank you! Your message has been sent successfully. We'll get back to you soon.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-6" data-i18n="contact.info.title">
+                                Get in Touch
+                            </h3>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope text-primary-600 text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2" data-i18n="contact.info.email.title">
+                                    Email Us
+                                </h4>
+                                <p class="text-gray-600">info@enigmamaritime.com</p>
+                                <p class="text-gray-600">services@enigmamaritime.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone text-primary-600 text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2" data-i18n="contact.info.phone.title">
+                                    Call Us
+                                </h4>
+                                <p class="text-gray-600">+1 (809) 555-0123</p>
+                                <p class="text-gray-600 text-sm" data-i18n="contact.info.phone.hours">
+                                    24/7 Emergency Services Available
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-primary-600 text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2" data-i18n="contact.info.address.title">
+                                    Visit Us
+                                </h4>
+                                <p class="text-gray-600" data-i18n="contact.info.address.line1">
+                                    Enigma Maritime Headquarters
+                                </p>
+                                <p class="text-gray-600" data-i18n="contact.info.address.line2">
+                                    Santo Domingo, Dominican Republic
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-6 border-t border-gray-200">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-4" data-i18n="contact.info.social.title">
+                                Follow Us
+                            </h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-linkedin text-lg"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-instagram text-lg"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center hover:bg-primary-500 hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-twitter text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="text-2xl font-bold text-white mb-4">
+                        <span data-i18n="footer.logo">Enigma Maritime</span>
+                    </div>
+                    <p class="text-gray-400 mb-6" data-i18n="footer.description">
+                        Latin America's trusted partner in cargo inspection, inventory control, and laboratory services since 2011.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors duration-300">
+                            <i class="fab fa-linkedin text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer.links.title">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.links.home">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.links.about">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.links.services">Services</a></li>
+                        <li><a href="#labs" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.links.labs">Labs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors" data-i18n="footer.links.contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer.services.title">Services</h3>
+                    <ul class="space-y-2">
+                        <li><span class="text-gray-400" data-i18n="footer.services.qq">Q&Q Inspection</span></li>
+                        <li><span class="text-gray-400" data-i18n="footer.services.lab">Laboratory Analysis</span></li>
+                        <li><span class="text-gray-400" data-i18n="footer.services.fiscal">Fiscal Control</span></li>
+                        <li><span class="text-gray-400" data-i18n="footer.services.loss">Loss Control</span></li>
+                        <li><span class="text-gray-400" data-i18n="footer.services.inventory">Inventory Control</span></li>
+                        <li><span class="text-gray-400" data-i18n="footer.services.logistics">Logistics & Warehousing</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer.contact.title">Contact Info</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-400 flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@enigmamaritime.com
+                        </p>
+                        <p class="text-gray-400 flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +1 (809) 555-0123
+                        </p>
+                        <p class="text-gray-400 flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                            <span data-i18n="footer.contact.address">Santo Domingo, Dominican Republic</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm" data-i18n="footer.copyright">
+                        © 2024 Enigma Maritime. All rights reserved.
+                    </p>
+                    <div class="mt-4 md:mt-0">
+                        <div class="language-switch">
+                            <button id="footer-lang-en" class="footer-lang-btn active px-3 py-1 text-sm font-medium text-primary-400 hover:text-primary-300 transition-colors">EN</button>
+                            <span class="text-gray-500">|</span>
+                            <button id="footer-lang-es" class="footer-lang-btn px-3 py-1 text-sm font-medium text-gray-400 hover:text-primary-400 transition-colors">ES</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- i18next for internationalization -->
+    <script src="https://unpkg.com/i18next@21.9.1/dist/umd/i18next.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
