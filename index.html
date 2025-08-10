@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="page.title">Enigma Maritime - Latin America's Trusted Partner in Cargo Inspection</title>
-    <meta name="description" data-i18n="page.description" content="Certified maritime services across the Caribbean - Quality, Precision, Compliance. Founded in 2011 in Dominican Republic.">
+    <meta name="description" data-i18n="page.description" content="Certified maritime services across the Caribbean - Quality, Precision, Compliance. Founded in 2022 in Dominican Republic.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -175,8 +175,9 @@
             
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right" data-aos-duration="800">
-                    <div class="bg-gray-900 rounded-2xl p-8 h-96 flex items-center justify-center border border-gray-700">
-                        <i class="fas fa-ship text-white text-8xl opacity-70"></i>
+                    <div class="bg-gray-900 rounded-2xl overflow-hidden h-96 border border-gray-700">
+                        <img src="assets/images/abu.png" alt="Maritime Operations" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
                     </div>
                 </div>
                 
@@ -190,7 +191,7 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold text-white mb-2" data-i18n="about.founded.title">
-                                    Founded in 2011
+                                    Founded in 2022
                                 </h3>
                                 <p class="text-gray-300" data-i18n="about.founded.description">
                                     Established in the Dominican Republic, we have grown to become a leading provider of maritime inspection and laboratory services across Latin America and the Caribbean.
@@ -210,22 +211,6 @@
                                 </h3>
                                 <p class="text-gray-300" data-i18n="about.presence.description">
                                     With offices and laboratories across multiple countries, we provide comprehensive coverage and local expertise to serve our clients' needs throughout the region.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <div class="flex-shrink-0">
-                                <div class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-certificate text-white text-xl"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-white mb-2" data-i18n="about.certification.title">
-                                    ISO Certified Excellence
-                                </h3>
-                                <p class="text-gray-300" data-i18n="about.certification.description">
-                                    Our commitment to quality is demonstrated through our ISO certifications and adherence to international standards including API, ASTM, and IFIA protocols.
                                 </p>
                             </div>
                         </div>
@@ -326,58 +311,87 @@
                         Complete storage, stevedoring, customs, and port services with expert import/export consulting for seamless operations.
                     </p>
                 </div>
+                
+                <!-- Stevedoring -->
+                <div class="service-card bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 group hover:-translate-y-2 border border-gray-700" data-aos="fade-up" data-aos-delay="700">
+                    <div class="w-16 h-16 bg-gray-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-white transition-colors duration-300">
+                        <i class="fas fa-anchor text-white text-2xl group-hover:text-gray-900 transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-4" data-i18n="services.stevedoring.title">
+                        Stevedoring
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed" data-i18n="services.stevedoring.description">
+                        Professional cargo handling services including loading, unloading, and securing operations with experienced maritime crews and modern equipment.
+                    </p>
+                </div>
+                
+                <!-- Agency -->
+                <div class="service-card bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 group hover:-translate-y-2 border border-gray-700" data-aos="fade-up" data-aos-delay="800">
+                    <div class="w-16 h-16 bg-gray-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-white transition-colors duration-300">
+                        <i class="fas fa-handshake text-white text-2xl group-hover:text-gray-900 transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-4" data-i18n="services.agency.title">
+                        Agency
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed" data-i18n="services.agency.description">
+                        Comprehensive vessel agency services including port clearance, documentation, crew assistance, and coordination with local authorities and suppliers.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Labs & Coverage Section -->
+    <!-- Global Reach Section -->
     <section id="labs" class="py-20 bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6" data-i18n="labs.title">
-                    Laboratory Network & Coverage
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6" data-i18n="global.title">
+                    Global Reach
                 </h2>
                 <div class="w-24 h-1 bg-white mx-auto mb-8"></div>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right" data-aos-duration="800">
-                    <h3 class="text-2xl font-semibold text-white mb-6" data-i18n="labs.network.title">
-                        Strategic Laboratory Locations
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <i class="fas fa-map-marker-alt text-white text-lg"></i>
-                            <span class="text-gray-300" data-i18n="labs.locations.aruba">Aruba - Full-service laboratory</span>
+                    <div class="space-y-8">
+                        <div class="text-center lg:text-left">
+                            <h3 class="text-3xl font-semibold text-white mb-6" data-i18n="global.worldwide.title">
+                                We Travel All Over The World
+                            </h3>
+                            <p class="text-xl text-gray-300 leading-relaxed mb-8" data-i18n="global.worldwide.description">
+                                Our experienced team travels globally to provide maritime inspection, laboratory services, and cargo supervision wherever our clients need us.
+                            </p>
                         </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fas fa-map-marker-alt text-white text-lg"></i>
-                            <span class="text-gray-300" data-i18n="labs.locations.bonaire">Bonaire - Advanced testing facility</span>
+                        
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center p-6 bg-gray-700 rounded-lg">
+                                <i class="fas fa-globe-americas text-white text-4xl mb-4"></i>
+                                <h4 class="text-lg font-semibold text-white mb-2" data-i18n="global.coverage.americas">Americas</h4>
+                                <p class="text-gray-300 text-sm" data-i18n="global.coverage.americas.desc">Full coverage across North, Central & South America</p>
+                            </div>
+                            <div class="text-center p-6 bg-gray-700 rounded-lg">
+                                <i class="fas fa-globe-europe text-white text-4xl mb-4"></i>
+                                <h4 class="text-lg font-semibold text-white mb-2" data-i18n="global.coverage.europe">Europe & Africa</h4>
+                                <p class="text-gray-300 text-sm" data-i18n="global.coverage.europe.desc">Strategic partnerships and direct services</p>
+                            </div>
+                            <div class="text-center p-6 bg-gray-700 rounded-lg">
+                                <i class="fas fa-globe-asia text-white text-4xl mb-4"></i>
+                                <h4 class="text-lg font-semibold text-white mb-2" data-i18n="global.coverage.asia">Asia Pacific</h4>
+                                <p class="text-gray-300 text-sm" data-i18n="global.coverage.asia.desc">Expanding presence in key maritime hubs</p>
+                            </div>
+                            <div class="text-center p-6 bg-gray-700 rounded-lg">
+                                <i class="fas fa-ship text-white text-4xl mb-4"></i>
+                                <h4 class="text-lg font-semibold text-white mb-2" data-i18n="global.coverage.mobile">Mobile Teams</h4>
+                                <p class="text-gray-300 text-sm" data-i18n="global.coverage.mobile.desc">Ready to deploy anywhere, anytime</p>
+                            </div>
                         </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fas fa-map-marker-alt text-white text-lg"></i>
-                            <span class="text-gray-300" data-i18n="labs.locations.eustatius">St. Eustatius - Regional analysis center</span>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fas fa-map-marker-alt text-white text-lg"></i>
-                            <span class="text-gray-300" data-i18n="labs.locations.dominican">Dominican Republic - Headquarters laboratory</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8 p-6 bg-gray-700 rounded-lg">
-                        <div class="flex items-center space-x-3 mb-3">
-                            <i class="fas fa-clock text-white text-xl"></i>
-                            <h4 class="text-lg font-semibold text-white" data-i18n="labs.availability.title">24/7 Service Availability</h4>
-                        </div>
-                        <p class="text-gray-300" data-i18n="labs.availability.description">
-                            Our laboratories operate around the clock with advanced testing equipment and certified technicians to provide rapid, accurate results when you need them most.
-                        </p>
                     </div>
                 </div>
                 
                 <div data-aos="fade-left" data-aos-duration="800">
-                    <div class="bg-gray-900 rounded-2xl p-8 h-96 flex items-center justify-center border border-gray-700">
-                        <i class="fas fa-microscope text-white text-8xl opacity-70"></i>
+                    <div class="bg-gray-900 rounded-2xl overflow-hidden h-96 border border-gray-700">
+                        <img src="assets/images/global.png" alt="Global Maritime Operations" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
                     </div>
                 </div>
             </div>
@@ -442,6 +456,8 @@
                                     <option value="loss-control" data-i18n="contact.form.service.loss">Loss Control</option>
                                     <option value="inventory" data-i18n="contact.form.service.inventory">Inventory Control</option>
                                     <option value="logistics" data-i18n="contact.form.service.logistics">Logistics & Warehousing</option>
+                                    <option value="stevedoring" data-i18n="contact.form.service.stevedoring">Stevedoring</option>
+                                    <option value="agency" data-i18n="contact.form.service.agency">Agency</option>
                                 </select>
                             </div>
                         </div>
@@ -490,8 +506,7 @@
                                 <h4 class="text-lg font-semibold text-white mb-2" data-i18n="contact.info.email.title">
                                     Email Us
                                 </h4>
-                                <p class="text-gray-300">info@enigmamaritime.com</p>
-                                <p class="text-gray-300">services@enigmamaritime.com</p>
+                                <p class="text-gray-300">ops@enigmamaritime.com</p>
                             </div>
                         </div>
                         
@@ -505,10 +520,23 @@
                                 <h4 class="text-lg font-semibold text-white mb-2" data-i18n="contact.info.phone.title">
                                     Call Us
                                 </h4>
-                                <p class="text-gray-300">+1 (809) 555-0123</p>
-                                <p class="text-gray-300 text-sm" data-i18n="contact.info.phone.hours">
+                                <p class="text-gray-300 mb-2">+1 (809) 910-3530</p>
+                                <p class="text-gray-300 text-sm mb-3" data-i18n="contact.info.phone.hours">
                                     24/7 Emergency Services Available
                                 </p>
+                                <!-- WhatsApp and SMS buttons -->
+                                <div class="flex flex-col sm:flex-row gap-2">
+                                    <a href="https://wa.me/18099103530" target="_blank" 
+                                       class="inline-flex items-center px-3 py-2 bg-green-600 hover:bg-green-700 text-white text-sm rounded-lg transition-colors duration-300">
+                                        <i class="fab fa-whatsapp mr-2"></i>
+                                        <span data-i18n="contact.info.phone.whatsapp">WhatsApp</span>
+                                    </a>
+                                    <a href="sms:+18099103530" 
+                                       class="inline-flex items-center px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg transition-colors duration-300">
+                                        <i class="fas fa-sms mr-2"></i>
+                                        <span data-i18n="contact.info.phone.sms">Text Message</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         
@@ -536,14 +564,11 @@
                                 Follow Us
                             </h4>
                             <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors duration-300">
+                                <a href="https://www.linkedin.com/company/enigma-maritime-services-s-r-l/" target="_blank" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors duration-300">
                                     <i class="fab fa-linkedin text-lg"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors duration-300">
+                                <a href="https://www.instagram.com/enigma_maritime?igsh=N213c3UybDY3YXZo" target="_blank" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors duration-300">
                                     <i class="fab fa-instagram text-lg"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors duration-300">
-                                    <i class="fab fa-twitter text-lg"></i>
                                 </a>
                             </div>
                         </div>
@@ -561,17 +586,14 @@
                 <div>
                     <img src="assets/images/whiteTree2.png" alt="Enigma Maritime" class="h-12 mb-4">
                     <p class="text-gray-300 mb-6 leading-relaxed" data-i18n="footer.description">
-                        Latin America's trusted partner in cargo inspection, inventory control, and laboratory services since 2011.
+                        Latin America's trusted partner in cargo inspection, inventory control, and laboratory services since 2022.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors duration-300">
+                        <a href="https://www.linkedin.com/company/enigma-maritime-services-s-r-l/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors duration-300">
                             <i class="fab fa-linkedin text-lg"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors duration-300">
+                        <a href="https://www.instagram.com/enigma_maritime?igsh=N213c3UybDY3YXZo" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors duration-300">
                             <i class="fab fa-instagram text-lg"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-white hover:text-gray-900 transition-colors duration-300">
-                            <i class="fab fa-twitter text-lg"></i>
                         </a>
                     </div>
                 </div>
@@ -607,11 +629,11 @@
                     <div class="space-y-2">
                         <p class="text-gray-300 flex items-center">
                             <i class="fas fa-envelope text-gray-400 mr-2"></i>
-                            info@enigmamaritime.com
+                            ops@enigmamaritime.com
                         </p>
                         <p class="text-gray-300 flex items-center">
                             <i class="fas fa-phone text-gray-400 mr-2"></i>
-                            +1 (809) 555-0123
+                            +1 (809) 910-3530
                         </p>
                         <p class="text-gray-300 flex items-start">
                             <i class="fas fa-map-marker-alt text-gray-400 mr-2 mt-1"></i>
@@ -624,7 +646,7 @@
             <div class="border-t border-gray-800 mt-12 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <p class="text-gray-400 text-sm" data-i18n="footer.copyright">
-                        © 2024 Enigma Maritime. All rights reserved.
+                        © 2025 Enigma Maritime. All rights reserved.
                     </p>
                     <div class="mt-4 md:mt-0">
                         <div class="language-switch">

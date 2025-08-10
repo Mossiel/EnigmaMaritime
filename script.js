@@ -5,7 +5,7 @@ const translations = {
     en: {
         // Page meta
         'page.title': 'Enigma Maritime - Latin America\'s Trusted Partner in Cargo Inspection',
-        'page.description': 'Certified maritime services across the Caribbean - Quality, Precision, Compliance. Founded in 2011 in Dominican Republic.',
+        'page.description': 'Certified maritime services across the Caribbean - Quality, Precision, Compliance. Founded in 2022 in Dominican Republic.',
         
         // Navigation
         'nav.logo': 'Enigma Maritime',
@@ -23,7 +23,7 @@ const translations = {
         
         // About Section
         'about.title': 'About Enigma Maritime',
-        'about.founded.title': 'Founded in 2011',
+        'about.founded.title': 'Founded in 2022',
         'about.founded.description': 'Established in the Dominican Republic, we have grown to become a leading provider of maritime inspection and laboratory services across Latin America and the Caribbean.',
         'about.presence.title': 'International Presence',
         'about.presence.description': 'With offices and laboratories across multiple countries, we provide comprehensive coverage and local expertise to serve our clients\' needs throughout the region.',
@@ -88,7 +88,7 @@ const translations = {
         
         // Footer
         'footer.logo': 'Enigma Maritime',
-        'footer.description': 'Latin America\'s trusted partner in cargo inspection, inventory control, and laboratory services since 2011.',
+        'footer.description': 'Latin America\'s trusted partner in cargo inspection, inventory control, and laboratory services since 2022.',
         'footer.links.title': 'Quick Links',
         'footer.links.home': 'Home',
         'footer.links.about': 'About',
@@ -104,13 +104,13 @@ const translations = {
         'footer.services.logistics': 'Logistics & Warehousing',
         'footer.contact.title': 'Contact Info',
         'footer.contact.address': 'Santo Domingo, Dominican Republic',
-        'footer.copyright': '© 2024 Enigma Maritime. All rights reserved.'
+        'footer.copyright': '© 2025 Enigma Maritime. All rights reserved.'
     },
     
     es: {
         // Page meta
         'page.title': 'Enigma Maritime - Socio de Confianza de América Latina en Inspección de Carga',
-        'page.description': 'Servicios marítimos certificados en el Caribe - Calidad, Precisión, Cumplimiento. Fundada en 2011 en República Dominicana.',
+        'page.description': 'Servicios marítimos certificados en el Caribe - Calidad, Precisión, Cumplimiento. Fundada en 2022 en República Dominicana.',
         
         // Navigation
         'nav.logo': 'Enigma Maritime',
@@ -128,7 +128,7 @@ const translations = {
         
         // About Section
         'about.title': 'Acerca de Enigma Maritime',
-        'about.founded.title': 'Fundada en 2011',
+        'about.founded.title': 'Fundada en 2022',
         'about.founded.description': 'Establecida en República Dominicana, hemos crecido para convertirnos en un proveedor líder de servicios de inspección marítima y laboratorio en América Latina y el Caribe.',
         'about.presence.title': 'Presencia Internacional',
         'about.presence.description': 'Con oficinas y laboratorios en múltiples países, brindamos cobertura integral y experiencia local para satisfacer las necesidades de nuestros clientes en toda la región.',
@@ -193,7 +193,7 @@ const translations = {
         
         // Footer
         'footer.logo': 'Enigma Maritime',
-        'footer.description': 'Socio de confianza de América Latina en inspección de carga, control de inventario y servicios de laboratorio desde 2011.',
+        'footer.description': 'Socio de confianza de América Latina en inspección de carga, control de inventario y servicios de laboratorio desde 2022.',
         'footer.links.title': 'Enlaces Rápidos',
         'footer.links.home': 'Inicio',
         'footer.links.about': 'Nosotros',
@@ -209,7 +209,7 @@ const translations = {
         'footer.services.logistics': 'Logística y Almacenamiento',
         'footer.contact.title': 'Información de Contacto',
         'footer.contact.address': 'Santo Domingo, República Dominicana',
-        'footer.copyright': '© 2024 Enigma Maritime. Todos los derechos reservados.'
+        'footer.copyright': '© 2025 Enigma Maritime. Todos los derechos reservados.'
     }
 };
 
@@ -670,3 +670,123 @@ window.EnigmaApp = {
     showLoading,
     hideLoading
 };
+
+// Contact Form Handler
+class ContactFormHandler {
+    constructor(formspreeUrl) {
+        this.formspreeUrl = formspreeUrl;
+        this.form = null;
+        this.submitButton = null;
+        this.messageElement = null;
+    }
+
+    initialize(formSelector) {
+        this.form = document.querySelector(formSelector);
+        this.submitButton = this.form?.querySelector('button[type="submit"]');
+        this.messageElement = document.getElementById('success-message');
+        
+        if (this.form) {
+            this.form.addEventListener('submit', this.handleSubmit.bind(this));
+        }
+    }
+
+    async handleSubmit(event) {
+        event.preventDefault();
+        
+        const formData = this.extractFormData();
+        
+        this.setLoadingState(true);
+        
+        try {
+            const response = await fetch(this.formspreeUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            this.showSuccess();
+            this.resetForm();
+        } catch (error) {
+            console.error('Failed to send email:', error);
+            this.showError();
+        } finally {
+            this.setLoadingState(false);
+        }
+    }
+
+    extractFormData() {
+        const formData = new FormData(this.form);
+        return {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            service: formData.get('service'),
+            message: formData.get('message'),
+            _subject: 'New Contact Form Submission - Enigma Maritime'
+        };
+    }
+
+    setLoadingState(isLoading) {
+        if (!this.submitButton) return;
+        
+        this.submitButton.disabled = isLoading;
+        this.submitButton.innerHTML = isLoading 
+            ? '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...'
+            : '<i class="fas fa-paper-plane mr-2"></i><span data-i18n="contact.form.submit">Send Message</span>';
+    }
+
+    showSuccess() {
+        this.showMessage(
+            'Thank you! Your message has been sent successfully. We\'ll get back to you soon.',
+            'success'
+        );
+    }
+
+    showError() {
+        this.showMessage(
+            'Sorry, there was an error sending your message. Please try again.',
+            'error'
+        );
+    }
+
+    showMessage(message, type) {
+        if (!this.messageElement) return;
+
+        const isSuccess = type === 'success';
+        const bgClass = isSuccess 
+            ? 'bg-green-800 border-green-600 text-green-200' 
+            : 'bg-red-800 border-red-600 text-red-200';
+        const iconClass = isSuccess 
+            ? 'fa-check-circle text-green-400' 
+            : 'fa-exclamation-circle text-red-400';
+
+        this.messageElement.className = `mt-6 p-4 border rounded-lg ${bgClass}`;
+        this.messageElement.innerHTML = `
+            <div class="flex items-center">
+                <i class="fas ${iconClass} mr-3"></i>
+                <span>${message}</span>
+            </div>
+        `;
+        this.messageElement.classList.remove('hidden');
+
+        setTimeout(() => {
+            this.messageElement.classList.add('hidden');
+        }, 5000);
+    }
+
+    resetForm() {
+        this.form.reset();
+    }
+}
+
+// Initialize contact form with Formspree
+document.addEventListener('DOMContentLoaded', function() {
+    const contactFormHandler = new ContactFormHandler('https://formspree.io/f/myzplleb');
+    contactFormHandler.initialize('#contact-form');
+});
