@@ -45,6 +45,10 @@ const translations = {
         'services.inventory.description': 'Tank and pipeline volume measurements, reconciliation services, and transfer book maintenance for accurate inventory management.',
         'services.logistics.title': 'Logistics & Warehousing',
         'services.logistics.description': 'Complete storage, stevedoring, customs, and port services with expert import/export consulting for seamless operations.',
+        'services.stevedoring.title': 'Stevedoring',
+        'services.stevedoring.description': 'Professional cargo handling services including loading, unloading, and securing operations with experienced maritime crews and modern equipment.',
+        'services.agency.title': 'Agency',
+        'services.agency.description': 'Comprehensive vessel agency services including port clearance, documentation, crew assistance, and coordination with local authorities and suppliers.',
         
         // Labs Section
         'labs.title': 'Laboratory Network & Coverage',
@@ -73,6 +77,8 @@ const translations = {
         'contact.form.service.loss': 'Loss Control',
         'contact.form.service.inventory': 'Inventory Control',
         'contact.form.service.logistics': 'Logistics & Warehousing',
+        'contact.form.service.stevedoring': 'Stevedoring',
+        'contact.form.service.agency': 'Agency',
         'contact.form.message': 'Message',
         'contact.form.message.placeholder': 'Tell us about your requirements and how we can help you',
         'contact.form.submit': 'Send Message',
@@ -88,6 +94,20 @@ const translations = {
         
         // Footer
         'footer.logo': 'Enigma Maritime',
+                // Global reach
+        'global.title': 'Global Reach',
+        'global.worldwide.title': 'We Travel All Over The World',
+        'global.worldwide.description': 'Our experienced team travels globally to provide maritime inspection, laboratory services, and cargo supervision wherever our clients need us.',
+        'global.coverage.americas': 'Americas',
+        'global.coverage.americas.desc': 'Full coverage across North, Central & South America',
+        'global.coverage.europe': 'Europe & Africa',
+        'global.coverage.europe.desc': 'Strategic partnerships and direct services',
+        'global.coverage.asia': 'Asia Pacific',
+        'global.coverage.asia.desc': 'Expanding presence in key maritime hubs',
+        'global.coverage.mobile': 'Mobile Teams',
+        'global.coverage.mobile.desc': 'Ready to deploy anywhere, anytime',
+        
+        // Footer
         'footer.description': 'Latin America\'s trusted partner in cargo inspection, inventory control, and laboratory services since 2022.',
         'footer.links.title': 'Quick Links',
         'footer.links.home': 'Home',
@@ -150,16 +170,23 @@ const translations = {
         'services.inventory.description': 'Mediciones de volumen de tanques y tuberías, servicios de reconciliación y mantenimiento de libros de transferencia para gestión precisa de inventario.',
         'services.logistics.title': 'Logística y Almacenamiento',
         'services.logistics.description': 'Servicios completos de almacenamiento, estiba, aduanas y puerto con consultoría experta en importación/exportación para operaciones sin problemas.',
+        'services.stevedoring.title': 'Estiba',
+        'services.stevedoring.description': 'Servicios profesionales de manejo de carga incluyendo operaciones de carga, descarga y aseguramiento con tripulaciones marítimas experimentadas y equipo moderno.',
+        'services.agency.title': 'Agencia',
+        'services.agency.description': 'Servicios integrales de agencia de buques incluyendo despacho portuario, documentación, asistencia a la tripulación y coordinación con autoridades locales y proveedores.',
         
-        // Labs Section
-        'labs.title': 'Red de Laboratorios y Cobertura',
-        'labs.network.title': 'Ubicaciones Estratégicas de Laboratorios',
-        'labs.locations.aruba': 'Aruba - Laboratorio de servicio completo',
-        'labs.locations.bonaire': 'Bonaire - Instalación de pruebas avanzadas',
-        'labs.locations.eustatius': 'St. Eustatius - Centro de análisis regional',
-        'labs.locations.dominican': 'República Dominicana - Laboratorio sede',
-        'labs.availability.title': 'Disponibilidad de Servicio 24/7',
-        'labs.availability.description': 'Nuestros laboratorios operan las 24 horas con equipos de prueba avanzados y técnicos certificados para proporcionar resultados rápidos y precisos cuando más los necesite.',
+        // Global Reach Section
+        'global.title': 'Alcance Global',
+        'global.worldwide.title': 'Viajamos Por Todo El Mundo',
+        'global.worldwide.description': 'Nuestro equipo experimentado viaja globalmente para proporcionar inspección marítima, servicios de laboratorio y supervisión de carga donde nuestros clientes nos necesiten.',
+        'global.coverage.americas': 'Américas',
+        'global.coverage.americas.desc': 'Cobertura completa en Norte, Centro y Sudamérica',
+        'global.coverage.europe': 'Europa y África',
+        'global.coverage.europe.desc': 'Alianzas estratégicas y servicios directos',
+        'global.coverage.asia': 'Asia Pacífico',
+        'global.coverage.asia.desc': 'Presencia en expansión en centros marítimos clave',
+        'global.coverage.mobile': 'Equipos Móviles',
+        'global.coverage.mobile.desc': 'Listos para desplegar en cualquier lugar, en cualquier momento',
         
         // Contact Section
         'contact.title': 'Contáctanos',
@@ -178,6 +205,8 @@ const translations = {
         'contact.form.service.loss': 'Control de Pérdidas',
         'contact.form.service.inventory': 'Control de Inventario',
         'contact.form.service.logistics': 'Logística y Almacenamiento',
+        'contact.form.service.stevedoring': 'Estiba',
+        'contact.form.service.agency': 'Agencia',
         'contact.form.message': 'Mensaje',
         'contact.form.message.placeholder': 'Cuéntenos sobre sus requerimientos y cómo podemos ayudarle',
         'contact.form.submit': 'Enviar Mensaje',
